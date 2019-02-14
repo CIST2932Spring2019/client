@@ -12,7 +12,7 @@
       </tr>
     </thead>
     <tbody id="patient-list-container" class="myTable">
-      <tr ~*ngFor="let patient of patients">
+      <tr *ngFor="let patient of patients">
         <td>{{patient.lastName}}, {{patient.firstName}}</td>
         <td>{{patient.gender}}</td>
         <td>{{patient.dateOfBirth}}</td>
