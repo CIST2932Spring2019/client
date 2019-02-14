@@ -11,6 +11,13 @@
         <th>Phone</th>
       </tr>
     </thead>
-    <tbody id="patient-list-container" class="myTable"></tbody>
+    <tbody id="patient-list-container" class="myTable">
+      <tr ~*ngFor="let patient of patients">
+        <td>{{patient.lastName}}, {{patient.firstName}}</td>
+        <td>{{patient.gender}}</td>
+        <td>{{patient.dateOfBirth}}</td>
+        <td>{{patient.phone}}</td>
+      </tr>
+    </tbody>
   </table>
 </div>
