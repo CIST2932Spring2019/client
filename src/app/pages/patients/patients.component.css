@@ -20,6 +20,7 @@ h1 {
     text-transform: uppercase;  /* Makes all text uppercase */
     font-size: 30px;
     font-weight: normal;        /* Changes the default bolded font weight of h1 to a normal weight*/
+    vertical-align: middle;
 }
 
 h2 {
@@ -33,7 +34,6 @@ h2 {
 
 input {                                   /* Styles HTML input form */
     font-size: 18px;
-    color: #fea745;                     /* Sets font color to same color as h1 background color */
     background-color: #f7f7f7;          /* Sets background color to light gray */
     width: 100%;                          /* Sets HTML input form to stretch to 100 percent of the div element it is nested in */
                                           /* NOTE: The width attribute refers to the length of the content of the element, and DOES NOT include the padding and margin */

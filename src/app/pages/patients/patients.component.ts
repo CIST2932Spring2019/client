@@ -4,13 +4,15 @@ import { Http } from '@angular/http';
 @Component({
   selector: 'app-patients',
   templateUrl: './patients.component.html',
-  styleUrls: ['./patients.component.css']
+  // styleUrls: ['./patients.component.css']
 })
 export class PatientsComponent implements OnInit {
   patients: any[];
+  
+  private url: string = 'https://localhost:44389/api/patients';
 
-  constructor(http: Http) {
-    http.get('https://my.api.mockaroo.com/patients.json?key=a2040a30')
+  constructor(private http: Http) {
+    http.get(this.url)
       .subscribe(response => {
         this.patients = response.json();
       })
@@ -19,4 +21,20 @@ export class PatientsComponent implements OnInit {
   ngOnInit() {
   }
 
+  createPatient(input: HTMLInputElement) {
+    let patient = {
+      firstName: input.value,
+      lastName: input.value
+    }
+
+    input.value = '';
+
+    this.patients.splice(0, 0, patient);
+  }
+
+  archivePatient(patient) {
+    this.http.patch(this.url + '/' + patient.socialSecurity, JSON.stringify({ IS_DELETED: true }))
+      .subscribe(response => {
+      })
+  }
 }
