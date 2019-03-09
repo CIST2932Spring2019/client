@@ -8,8 +8,8 @@ import { Http } from '@angular/http';
 })
 export class PatientsComponent implements OnInit {
   patients: any[];
-  
-  private url: string = 'https://localhost:44389/api/patients';
+
+  private url: string = 'http://sprandapp.azurewebsites.net/api/patients';
 
   constructor(private http: Http) {
     http.get(this.url)
@@ -17,7 +17,7 @@ export class PatientsComponent implements OnInit {
         this.patients = response.json();
       })
   }
-
+  
   ngOnInit() {
   }
 
@@ -30,11 +30,5 @@ export class PatientsComponent implements OnInit {
     input.value = '';
 
     this.patients.splice(0, 0, patient);
-  }
-
-  archivePatient(patient) {
-    this.http.patch(this.url + '/' + patient.socialSecurity, JSON.stringify({ IS_DELETED: true }))
-      .subscribe(response => {
-      })
   }
 }
