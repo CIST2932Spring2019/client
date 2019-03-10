@@ -1,15 +1,14 @@
 import { TestBed, inject } from '@angular/core/testing';
-
-import { ViewPatientsService } from './view-patients.service';
+import { ViewAllPatientsService } from './view-all-patients.service';
 
 describe('ViewPatientsService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [ViewPatientsService]
+      providers: [ViewAllPatientsService]
     });
   });
 
-  it('should be created', inject([ViewPatientsService], (service: ViewPatientsService) => {
+  it('should be created', inject([ViewAllPatientsService], (service: ViewAllPatientsService) => {
     expect(service).toBeTruthy();
   }));
 });

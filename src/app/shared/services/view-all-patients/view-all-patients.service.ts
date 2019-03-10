@@ -4,7 +4,7 @@ import { Http } from '@angular/http';
 @Injectable({
   providedIn: 'root'
 })
-export class ViewPatientsService {
+export class ViewAllPatientsService {
   private url: string = 'http://sprandapp.azurewebsites.net/api/patients';
 
   constructor(private http: Http) {

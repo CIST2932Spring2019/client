@@ -2,11 +2,11 @@ import { PatientProfileComponent } from './patient-profile/patient-profile.compo
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { ViewPatientsComponent } from './view-patients/view-patients.component';
+import { ViewAllPatientsComponent } from './view-all-patients/view-all-patients.component';
 import { CreatePatientComponent } from './create-patient/create-patient.component';
 
 const routes: Routes = [
-  { path: '', component: ViewPatientsComponent },
+  { path: '', component: ViewAllPatientsComponent },
   { path: 'new', component: CreatePatientComponent },
   { path: ':patientID', component: PatientProfileComponent }
 ];
