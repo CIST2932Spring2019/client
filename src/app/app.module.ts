@@ -1,4 +1,3 @@
-import { ViewPatientsService } from './shared/services/view-patients/view-patients.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
@@ -17,9 +16,7 @@ import { AppRoutingModule } from './app-routing.module';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [
-    ViewPatientsService
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

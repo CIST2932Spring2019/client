@@ -1,7 +1,7 @@
 import { TestBed, inject } from '@angular/core/testing';
 import { ViewAllPatientsService } from './view-all-patients.service';
 
-describe('ViewPatientsService', () => {
+describe('ViewAllPatientsService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       providers: [ViewAllPatientsService]

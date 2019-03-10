@@ -1,6 +1,6 @@
 <h1 class="dash-title">
-  <i class="fa fa-id-card"></i>&nbsp;&nbsp;View Patients
-  <a class="btn btn-primary float-right border-0 my-1 py-2 px-3" routerLink="new"><i class="fa fa-user-plus"></i> Add
+  <i class="fas fa-users"></i>&nbsp;&nbsp;View Patients
+  <a class="btn btn-primary float-right btn-lg text-white" routerLink="new"><i class="fas fa-user-plus"></i> Add
     New Patient</a>
 </h1>
 
@@ -13,7 +13,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let patient of patients" routerLink="{{patient.patientID}}">
+    <tr *ngFor="let patient of patients" routerLink="{{patient.patientID}}" (click)="patientSelected(patient)">
       <td>{{patient.lastName}}</td>
       <td>{{patient.firstName}}</td>
       <td>{{patient.patientID}}</td>
