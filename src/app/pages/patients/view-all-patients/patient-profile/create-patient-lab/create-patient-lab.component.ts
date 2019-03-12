@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {  Location } from '@angular/common';
 
 @Component({
   selector: 'create-patient-lab',
@@ -6,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./create-patient-lab.component.css']
 })
 export class CreatePatientLabComponent implements OnInit {
+  lab: any;
+  private url = 'http://localhost:44300/labs';
 
-  constructor() { }
+  constructor(private location: Location) { }
 
   ngOnInit() {
   }
 
+  goBackClicked() {
+    this.location.back();
+  }
+
+  createPost(labEntry: HTMLInputElement) {
+
+  }
 }

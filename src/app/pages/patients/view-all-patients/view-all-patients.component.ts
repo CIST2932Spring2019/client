@@ -10,7 +10,9 @@ import { Component, OnInit } from '@angular/core';
 export class ViewAllPatientsComponent implements OnInit {
   patients: any[];
 
-  constructor(private viewAllPatientsService: ViewAllPatientsService, private currentPatientService: CurrentPatientService) {
+  constructor(
+    private viewAllPatientsService: ViewAllPatientsService,
+    private currentPatientService: CurrentPatientService) {
   }
   
   ngOnInit() {

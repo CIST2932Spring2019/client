@@ -1,10 +1,10 @@
 <h1 class="dash-title">
   <i class="fas fa-users"></i>&nbsp;&nbsp;View Patients
-  <a class="btn btn-primary float-right btn-lg text-white" routerLink="new"><i class="fas fa-user-plus"></i> Add
-    New Patient</a>
+  <a class="btn btn-primary btn-lg text-white float-right" routerLink="new">
+    <i class="fas fa-user-plus"></i> Add NewPatient</a>
 </h1>
 
-<table id="example" class="table table-hover table-in-card">
+<table id="example" class="table table-hover table-in-card bg-light">
   <thead>
     <tr>
       <th>Last Name</th>
@@ -13,7 +13,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let patient of patients" routerLink="{{patient.patientID}}" (click)="patientSelected(patient)">
+    <tr *ngFor="let patient of patients" routerLink="profile" (click)="patientSelected(patient)">
       <td>{{patient.lastName}}</td>
       <td>{{patient.firstName}}</td>
       <td>{{patient.patientID}}</td>

@@ -23,13 +23,12 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "node_modules/font-awesome/css/font-awesome.min.css",
+              "src/assets/css/spur.css",
               "src/styles.css"
             ],
             "scripts": [
-              "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+              "src/assets/js/spur.js",
+              "src/assets/js/chart-js-config.js"
             ]
           },
           "configurations": {
@@ -77,9 +76,13 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
+              "src/assets/css/spur.css",
               "src/styles.css"
             ],
-            "scripts": [],
+            "scripts": [
+              "src/assets/js/spur.js",
+              "src/assets/js/chart-js-config.js"
+            ],
             "assets": [
               "src/favicon.ico",
               "src/assets"

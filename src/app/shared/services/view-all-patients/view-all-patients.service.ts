@@ -5,7 +5,7 @@ import { Http } from '@angular/http';
   providedIn: 'root'
 })
 export class ViewAllPatientsService {
-  private url: string = 'http://sprandapp.azurewebsites.net/api/patients';
+  private url: string = 'http://localhost:44300/api/patients';
 
   constructor(private http: Http) {
   }
