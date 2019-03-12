@@ -1,37 +1,38 @@
 <h1 class="dash-title">
-    <i class="fa fa-id-card"></i>&nbsp;&nbsp;Patient Profile
-
-    <div class="btn-group float-right">
-        <button type="button" class="btn btn-dark btn-lg text-white" (click)="goBackClicked()"><i class="fas fa-arrow-left"></i> Go Back</button>
-        <button type="button" class="btn btn-primary btn-lg text-white"  routerLink="lab"><i class="fas fa-vial"></i> Add New Lab</button>
-    </div>
+  <i class="fa fa-id-card"></i>&nbsp;&nbsp;Patient Profile
+  <div class="btn-group float-right">
+    <button type="button" class="btn btn-dark btn-lg text-white" (click)="goBackClicked()"><i
+        class="fas fa-arrow-left"></i> Go Back</button>
+    <button type="button" class="btn btn-primary btn-lg text-white" routerLink="lab"><i class="fas fa-vial"></i> Add
+      New Lab</button>
+  </div>
 </h1>
 
 <div class="card spur-card">
-    <div class="card-header">
-        <div class="spur-card-icon">
-            <i class="fas fa-vials"></i>
-        </div>
-        <div class="spur-card-title">{{patient.firstName}} {{patient.lastName}}'s Lab Records</div>
+  <div class="card-header">
+    <div class="spur-card-icon">
+      <i class="fas fa-vials"></i>
     </div>
-    <div class="card-body ">
-        <table id="example" class="table table-hover table-in-card">
-            <thead>
-                <tr>
-                    <th>Patient ID</th>
-                    <th>Lab Type</th>
-                    <th>Lab Value</th>
-                    <th>Date</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let lab of labs">
-                    <td>{{lab.patientID}}</td>
-                    <td>{{lab.labType}}</td>
-                    <td>{{lab.labValue}}</td>
-                    <td>{{lab.date}}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+    <div class="spur-card-title">{{patient.firstName}} {{patient.lastName}}'s Lab Records</div>
+  </div>
+  <div class="card-body ">
+    <table class="table table-hover table-in-card">
+      <thead>
+        <tr>
+          <th>Patient ID</th>
+          <th>Lab Type</th>
+          <th>Lab Value</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let lab of labs">
+          <td>{{lab.patientID}}</td>
+          <td>{{lab.labType}}</td>
+          <td>{{lab.labValue}}</td>
+          <td>{{lab.date}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>

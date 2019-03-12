@@ -7,8 +7,7 @@ import { Http } from '@angular/http';
 export class ViewAllPatientsService {
   private url: string = 'http://localhost:44300/api/patients';
 
-  constructor(private http: Http) {
-  }
+  constructor(private http: Http) { }
   
   getAllPatients() {
     return this.http.get(this.url);

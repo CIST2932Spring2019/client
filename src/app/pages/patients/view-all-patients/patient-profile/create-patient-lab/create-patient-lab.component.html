@@ -4,4 +4,60 @@
       class="fas fa-arrow-left"></i> Go Back</button>
 </h1>
 
-<input (keyup.enter)="createLab(labEntry)" #labEntry type="text" class="form-control">
+<!-- 
+    <div class="spur-card-title"></div>
+  </div>
+  <table class="table table-hover table-in-card">
+    <thead>
+      <tr class="row container-fluid">
+        <th class="col-md-5">Lab Type</th>
+        <th class="col-md-3">Lab Value</th>
+        <th class="col-md-1">Date</th>
+        <th class="col-md-2">History</th>
+        <th class="col-md-1"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="row container-fluid" *ngFor="let labType of labTypes" routerLink="profile">
+        <td class="col-md-5">{{labType.labType}}</td>
+        <td class="col-md-3"><input type="text" class="form-control"></td>
+        <td class="col-md-1"><i class="fas fa-calendar-alt"></i></td>
+        <td class="col-md-2"></td>
+        <td class="col-md-1">
+          <mat-slide-toggle></mat-slide-toggle>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div> -->
+
+<div class="card spur-card">
+    <div class="card-header">
+      <div class="spur-card-icon">
+        <i class="fas fa-vials"></i>
+      </div>
+      <div class="spur-card-title"></div>
+    </div>
+    <div class="card-body">
+      <table class="table table-hover table-in-card">
+        <thead>
+          <tr class="row container-fluid">
+              <th class="col-md-4">Lab Type</th>
+              <th class="col-md-3">Lab Value</th>
+              <th class="col-md-2">Date</th>
+              <th class="col-md-2">History</th>
+              <th class="col-md-1"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="row container-fluid" *ngFor="let labType of labTypes">
+            <td class="col-md-4">{{labType.labType}}</td>
+            <td class="col-md-3"><input class="form-control"></td>
+            <td class="col-md-2"><i class="fas fa-calendar-alt"></i></td>
+            <td class="col-md-2">View Lab History</td>
+            <td class="col-md-1"><mat-slide-toggle></mat-slide-toggle></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

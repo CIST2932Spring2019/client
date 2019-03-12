@@ -4,19 +4,23 @@
     <i class="fas fa-user-plus"></i> Add NewPatient</a>
 </h1>
 
-<table id="example" class="table table-hover table-in-card bg-light">
-  <thead>
-    <tr>
-      <th>Last Name</th>
-      <th>First Name</th>
-      <th>Patient ID</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let patient of patients" routerLink="profile" (click)="patientSelected(patient)">
-      <td>{{patient.lastName}}</td>
-      <td>{{patient.firstName}}</td>
-      <td>{{patient.patientID}}</td>
-    </tr>
-  </tbody>
-</table>
+<div class="card spur-card">
+    <div class="card-body ">
+      <table class="table table-hover table-in-card">
+        <thead>
+          <tr>
+            <th>Last Name</th>
+            <th>First Name</th>
+            <th>Patient ID</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let patient of patients" routerLink="profile" (click)="patientSelected(patient)">
+              <td>{{patient.lastName}}</td>
+              <td>{{patient.firstName}}</td>
+              <td>{{patient.patientID}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
