@@ -1,32 +1,34 @@
-<h1 class="dash-title">
-  <i class="fa fa-id-card"></i>&nbsp;&nbsp;{{patient.lastName}}, {{patient.firstName}}
-  <div class="btn-group float-right">
-    <button type="button" class="btn btn-dark btn-lg text-white" (click)="goBackClicked()">
-      <i class="fas fa-arrow-left"></i>&nbsp;&nbsp;View Patients</button>
-    <button type="button" class="btn btn-primary btn-lg text-white" routerLink="lab">
-      <i class="fas fa-vial"></i>&nbsp;&nbsp;Add New Lab<Label></Label></button>
-  </div>
-</h1>
+<div class="mat-typography">
+  <h1>
+    <i class="fa fa-id-card"></i>&nbsp;&nbsp;{{patient.lastName}}, {{patient.firstName}}
+    <div class="btn-group float-right">
+      <button mat-raised-button class="mr-3" (click)="goBackClicked()">
+        <i class="fas fa-arrow-left mr-1"></i>View Patients</button>
+      <button mat-raised-button color="primary" routerLink="lab">
+        <i class="fas fa-vial mr-1"></i>Add New Lab<Label></Label></button>
+    </div>
+  </h1>
 
-<div class="card spur-card">
-  <div class="card-body ">
-    <table class="table table-hover table-in-card">
-      <thead>
-        <tr>
-          <th>Patient ID</th>
-          <th>Lab Type</th>
-          <th>Lab Value</th>
-          <th>Date</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let lab of labs">
-          <td>{{lab.patientID}}</td>
-          <td>{{lab.labType}}</td>
-          <td>{{lab.labValue}}</td>
-          <td>{{lab.date}}</td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="card spur-card">
+    <div class="card-body">
+      <table class="table table-hover table-in-card">
+        <thead>
+          <tr>
+            <th class="mat-subheading-2">Patient ID</th>
+            <th class="mat-subheading-2">Lab Type</th>
+            <th class="mat-subheading-2">Lab Value</th>
+            <th class="mat-subheading-2">Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let lab of labs">
+            <td>{{lab.patientID}}</td>
+            <td>{{lab.labType}}</td>
+            <td>{{lab.labValue}}</td>
+            <td>{{lab.date}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>

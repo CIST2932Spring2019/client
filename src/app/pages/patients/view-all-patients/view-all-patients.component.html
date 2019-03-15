@@ -1,30 +1,32 @@
-<h1 class="dash-title">
-  <i class="fas fa-users"></i>&nbsp;&nbsp;View Patients
-  <div class="btn-group float-right">
-    <button type="button" class="btn btn-dark btn-lg text-white" (click)="goBackClicked()">
-        <i class="fas fa-arrow-left"></i>&nbsp;&nbsp;Overview</button>
-    <button type="button" class="btn btn-primary btn-lg text-white" routerLink="new">
-      <i class="fas fa-user-plus"></i>&nbsp;&nbsp;Add New Patient</button>
-  </div>
-</h1>
+<div class="mat-typography">
+  <h1>
+    <i class="fas fa-users d-inline-block mr-1"></i>View Patients
+    <div class="d-inline-block">
+      <button mat-raised-button class="mr-3" (click)="goBackClicked()">
+        <i class="fas fa-arrow-left mr-1"></i>Overview</button>
+      <button mat-raised-button color="primary" routerLink="new">
+        <i class="fas fa-user-plus mr-1"></i>Add New Patient</button>
+    </div>
+  </h1>
 
-<div class="card spur-card">
-  <div class="card-body ">
-    <table class="table table-hover table-in-card">
-      <thead>
-        <tr>
-          <th>Last Name</th>
-          <th>First Name</th>
-          <th>Patient ID</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let patient of patients" routerLink="profile" (click)="patientSelected(patient)">
-          <td>{{patient.lastName}}</td>
-          <td>{{patient.firstName}}</td>
-          <td>{{patient.patientID}}</td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="card spur-card">
+    <div class="card-body ">
+      <table class="table table-hover table-in-card">
+        <thead>
+          <tr>
+            <th class="mat-subheading-2">Last Name</th>
+            <th class="mat-subheading-2">First Name</th>
+            <th class="mat-subheading-2">Patient ID</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let patient of patients" routerLink="profile" (click)="patientSelected(patient)">
+            <td>{{patient.lastName}}</td>
+            <td>{{patient.firstName}}</td>
+            <td>{{patient.patientID}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>
