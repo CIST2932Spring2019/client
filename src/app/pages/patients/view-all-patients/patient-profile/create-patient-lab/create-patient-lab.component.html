@@ -1,7 +1,7 @@
 <h1 class="dash-title">
-  <i class="fa fa-id-card"></i>&nbsp;&nbsp;Add New Lab
-  <button type="button" class="btn btn-dark btn-lg text-white float-right" (click)="goBackClicked()"><i
-      class="fas fa-arrow-left"></i> Go Back</button>
+  <i class="fa fa-id-card"></i>&nbsp;&nbsp;{{patient.lastName}}, {{patient.firstName}}
+  <button type="button" class="btn btn-dark btn-lg text-white float-right" (click)="goBackClicked()">
+    <i class="fas fa-arrow-left"></i>&nbsp;&nbsp;Patient Profile</button>
 </h1>
 
 <div class="card spur-card">
@@ -9,7 +9,7 @@
       <div class="spur-card-icon">
         <i class="fas fa-vials"></i>
       </div>
-      <div class="spur-card-title"></div>
+      <div class="spur-card-title">Add New Lab</div>
     </div>
     <div class="card-body">
       <table class="table table-hover table-in-card">
@@ -26,10 +26,11 @@
           <tr class="row container-fluid" *ngFor="let labType of labTypes">
             <td class="col-md-4">{{labType.labType}}</td>
             <td class="col-md-3"><input class="form-control"></td>
-            <td class="col-md-2"><i class="fas fa-calendar-alt"></i></td>
+            <td class="col-md-2"><i class="fas fa-calendar-alt"></i> Today</td>
             <td class="col-md-2">View Lab History</td>
             <td class="col-md-1"><mat-slide-toggle></mat-slide-toggle></td>
           </tr>
+          <tr><button mat-raised-button color="primary">Primary</button></tr>
         </tbody>
       </table>
     </div>
