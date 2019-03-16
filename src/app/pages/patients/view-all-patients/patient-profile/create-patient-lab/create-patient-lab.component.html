@@ -1,37 +1,36 @@
-<div class="mat-typography">
-  <h1>
-    <i class="fa fa-id-card mr-1"></i>{{patient.lastName}}, {{patient.firstName}}
-    <div class="btn-group float-right">
-      <button mat-raised-button class="mr-3" (click)="goBackClicked()">
-        <i class="fas fa-arrow-left mr-1"></i>Patient Profile</button>
-      <button mat-raised-button color="primary"><i class="fas fa-clipboard-check"></i>&nbsp;&nbsp;Submit Lab</button>
-    </div>
-  </h1>
+<h1>
+  <i class="fa fa-id-card mr-1"></i>{{patient.lastName}}, {{patient.firstName}}
+  <div class="btn-group float-right">
+    <button mat-raised-button class="mr-3" (click)="goBackClicked()">
+      <i class="fas fa-arrow-left mr-1"></i>Patient Profile</button>
+    <button mat-raised-button color="primary"><i class="fas fa-clipboard-check"></i>&nbsp;&nbsp;Submit Lab</button>
+  </div>
+</h1>
 
-  <div class="card spur-card">
-    <div class="card-body">
-      <table class="table table-hover table-in-card">
-        <thead>
-          <tr>
-            <th class="mat-subheading-2">Lab Type</th>
-            <th class="mat-subheading-2">Lab Value</th>
-            <th class="mat-subheading-2">Date</th>
-            <th class="mat-subheading-2">History</th>
-            <th class="mat-subheading-2"></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let labType of labTypes">
-            <td>{{labType.labType}}</td>
-            <td><input class="form-control"></td>
-            <td><i class="fas fa-calendar-alt mr-1"></i>Today</td>
-            <td>View Lab History</td>
-            <td>
-              <mat-slide-toggle></mat-slide-toggle>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+<div class="card spur-card">
+  <div class="card-body">
+    <table class="table table-hover table-in-card">
+      <thead>
+        <tr>
+          <th class="mat-subheading-2">Lab Type</th>
+          <th class="mat-subheading-2">Lab Value</th>
+          <th class="mat-subheading-2">Date</th>
+          <th class="mat-subheading-2">History</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let labType of labTypes">
+          <td>{{labType.labType}}</td>
+          <td>
+            <mat-form-field appearance="outline">
+              <mat-label>Enter Lab Value</mat-label>
+              <input matInput>
+            </mat-form-field>
+          </td>
+          <td><i class="fas fa-calendar-alt mr-1"></i>Today</td>
+          <td>View Lab History</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>

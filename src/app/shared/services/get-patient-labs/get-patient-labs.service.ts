@@ -14,8 +14,8 @@ export class GetPatientLabsService {
     private currentPatientService: CurrentPatientService) {
   }
   
-  getPatientLabs(patientID: string) {
-    console.log(this.http.get(this.url + '/' + patientID));
-    return this.http.get(this.url + '/' + patientID);
+  getPatientLabs(patientId: string) {
+    console.log(this.http.get(this.url + '/' + patientId));
+    return this.http.get(this.url + '/' + patientId);
   }
 }

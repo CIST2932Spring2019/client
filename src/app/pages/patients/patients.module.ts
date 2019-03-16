@@ -6,12 +6,14 @@ import { ViewAllPatientsComponent } from './view-all-patients/view-all-patients.
 import { CreatePatientComponent } from './view-all-patients/create-patient/create-patient.component';
 import { PatientProfileComponent } from './view-all-patients/patient-profile/patient-profile.component';
 import { CreatePatientLabComponent } from './view-all-patients/patient-profile/create-patient-lab/create-patient-lab.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     PatientsRoutingModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule
   ],
   declarations: [
     ViewAllPatientsComponent,

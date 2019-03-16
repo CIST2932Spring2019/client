@@ -22,7 +22,7 @@ export class ViewAllPatientsComponent implements OnInit {
       })
   }
 
-  patientSelected(patient) {
+  patientSelected(patient: any) {
     this.currentPatientService.setCurrentPatient(patient);
   }
 }

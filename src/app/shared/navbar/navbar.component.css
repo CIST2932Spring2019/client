@@ -1,0 +1,19 @@
+mat-sidenav-container {
+    height: 100%;
+}
+
+mat-sidenav, mat-sidenav-content {
+    padding: 0;
+}
+
+mat-sidenav {
+    width: 200px;
+}
+
+button {
+    outline: none;
+}
+
+a:hover {
+    text-decoration: none;
+}

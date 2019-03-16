@@ -10,7 +10,7 @@ import { CurrentPatientService } from 'src/app/shared/services/current-patient/c
 })
 export class PatientProfileComponent implements OnInit {
   patient: any;
-  labs: {};
+  labs: any[];
 
   constructor(
     private currentPatientService: CurrentPatientService,
@@ -21,13 +21,9 @@ export class PatientProfileComponent implements OnInit {
   ngOnInit() {
     this.patient = this.currentPatientService.getCurrentPatient();
 
-    this.getPatientLabsService.getPatientLabs(this.patient.patientID)
+    this.getPatientLabsService.getPatientLabs(this.patient.patientId)
       .subscribe(response => {
         this.labs = response.json();
       })
-  }
-
-  goBackClicked() {
-    this.location.back();
   }
 }
