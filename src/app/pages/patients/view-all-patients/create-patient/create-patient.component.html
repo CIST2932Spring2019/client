@@ -1,31 +1,25 @@
 <h1>
-  <i class="fas fa-users d-inline-block mr-3"></i>Add New Patient
+  <i class="fas fa-users d-inline-block mr-3"></i>New Patient
   <div class="d-inline-block float-right">
     <button mat-raised-button routerLink="../">
-      <i class="fas fa-arrow-left mr-3"></i>View Patients</button>
+      <i class="fas fa-arrow-left mr-3"></i>Patients</button>
   </div>
 </h1>
 
-<mat-card>
-  <form #input="ngForm" (ngSubmit)="createPatient()">
-    <p>
-      <mat-form-field appearance="outline" class="mr-3">
-        <mat-label>First Name</mat-label>
-        <input matInput type="text" name="firstName" [(ngModel)]="patient.firstName">
-      </mat-form-field>
-      <mat-form-field appearance="outline">
-        <mat-label>Last Name</mat-label>
-        <input matInput type="text" name="lastName" [(ngModel)]="patient.lastName">
-      </mat-form-field>
-    </p>
-    <p>
-      <mat-form-field appearance="outline">
-        <mat-label>Patient ID</mat-label>
-        <input matInput type="text" name="patientId" [(ngModel)]="patient.patientId">
-      </mat-form-field>
-      <p>
-        <button type="submit" mat-raised-button color="primary">
-          <i class="fas fa-user-plus mr-3"></i>Add Patient</button>
-      </p>
-  </form>
-</mat-card>
+
+<form #input="ngForm" (ngSubmit)="createPatient()">
+  <mat-form-field appearance="outline" class="mr-3">
+    <mat-label>First Name</mat-label>
+    <input matInput class="mr-3" type="text" name="firstName" [(ngModel)]="patient.firstName">
+  </mat-form-field>
+  <mat-form-field appearance="outline" class="mr-3">
+    <mat-label>Last Name</mat-label>
+    <input matInput class="mr-3" type="text" name="lastName" [(ngModel)]="patient.lastName">
+  </mat-form-field>
+  <mat-form-field appearance="outline" class="mr-3">
+    <mat-label>Patient ID</mat-label>
+    <input matInput class="mr-3" type="text" name="patientId" [(ngModel)]="patient.patientId">
+  </mat-form-field>
+  <button class="btn-block" type="submit" mat-raised-button color="primary">
+    <i class="fas fa-user-plus mr-3"></i>Create Patient</button>
+</form>

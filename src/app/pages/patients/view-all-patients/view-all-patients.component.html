@@ -1,30 +1,26 @@
 <h1>
-  <i class="fas fa-users d-inline-block mr-3"></i>View Patients
+  <i class="fas fa-users d-inline-block mr-3"></i>Patients
   <div class="d-inline-block float-right">
     <button mat-raised-button routerLink="../" class="mr-3">
       <i class="fas fa-arrow-left mr-3"></i>Overview</button>
     <button mat-raised-button color="primary" routerLink="new">
-      <i class="fas fa-user-plus mr-3"></i>Add New Patient</button>
+      <i class="fas fa-user-plus mr-3"></i>New Patient</button>
   </div>
 </h1>
 
-<div class="card spur-card">
-  <div class="card-body ">
-    <table class="table table-hover table-in-card">
-      <thead>
-        <tr>
-          <th class="mat-subheading-2">Last Name</th>
-          <th class="mat-subheading-2">First Name</th>
-          <th class="mat-subheading-2">Patient ID</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let patient of patients" routerLink="profile" (click)="patientSelected(patient)">
-          <td>{{patient.lastName}}</td>
-          <td>{{patient.firstName}}</td>
-          <td>{{patient.patientId}}</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th class="mat-subheading-2">Last Name</th>
+      <th class="mat-subheading-2">First Name</th>
+      <th class="mat-subheading-2">Patient Id</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let patient of patients" routerLink="profile" (click)="patientSelected(patient)">
+      <td>{{patient.lastName}}</td>
+      <td>{{patient.firstName}}</td>
+      <td>{{patient.patientId}}</td>
+    </tr>
+  </tbody>
+</table>

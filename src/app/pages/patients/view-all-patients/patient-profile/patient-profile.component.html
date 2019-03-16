@@ -1,32 +1,51 @@
 <h1>
-  <i class="fa fa-id-card"></i>&nbsp;&nbsp;{{patient.lastName}}, {{patient.firstName}}
+  <i class="fas fa-user mr-3"></i>{{patient.lastName}}, {{patient.firstName}}
   <div class="btn-group float-right">
     <button mat-raised-button class="mr-3" routerLink="../">
-      <i class="fas fa-arrow-left mr-3"></i>View Patients</button>
+      <i class="fas fa-arrow-left mr-3"></i>Patients</button>
+    <button *ngIf="isVisible" mat-raised-button class="mr-3" (click)="isVisible = !isVisible">
+      <i class="fas fa-edit mr-3"></i>Edit Past Labs<Label></Label></button>
+    <button *ngIf="!isVisible" mat-raised-button class="mr-3" (click)="isVisible = !isVisible">
+      <i class="fas fa-user mr-3"></i>Patient Profile<Label></Label></button>
     <button mat-raised-button color="primary" routerLink="lab">
-      <i class="fas fa-vial mr-3"></i>Add New Lab<Label></Label></button>
+      <i class="fas fa-vial mr-3"></i>Add Labs<Label></Label></button>
   </div>
 </h1>
 
-<div class="card spur-card">
-  <div class="card-body">
-    <table class="table table-hover table-in-card">
-      <thead>
-        <tr>
-          <th class="mat-subheading-2">Patient Id</th>
-          <th class="mat-subheading-2">Lab Type</th>
-          <th class="mat-subheading-2">Lab Value</th>
-          <th class="mat-subheading-2">Date</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let lab of labs">
-          <td>{{lab.patientId}}</td>
-          <td>{{lab.labType}}</td>
-          <td>{{lab.labValue}}</td>
-          <td>{{lab.date | date: 'dd/MM/yyyy'}}</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
+<table *ngIf="isVisible" class="table table-hover">
+  <thead>
+    <tr>
+      <th class="mat-subheading-2">Patient Id</th>
+      <th class="mat-subheading-2">Type</th>
+      <th class="mat-subheading-2">Value</th>
+      <th class="mat-subheading-2">Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let lab of labs">
+      <td>{{lab.patientId}}</td>
+      <td>{{lab.labType}}</td>
+      <td>{{lab.labValue}}</td>
+      <td>{{lab.date | date: 'MM/dd/yyyy'}}<br>{{lab.date | date: 'hh:mm aa'}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<table *ngIf="!isVisible" class="table table-hover">
+  <thead>
+    <tr>
+      <th class="mat-subheading-2">Edit Button Success</th>
+      <th class="mat-subheading-2">Type</th>
+      <th class="mat-subheading-2">Value</th>
+      <th class="mat-subheading-2">Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let lab of labs">
+      <td>{{lab.patientId}}</td>
+      <td>{{lab.labType}}</td>
+      <td>{{lab.labValue}}</td>
+      <td>{{lab.date | date: 'MM/dd/yyyy'}}<br>{{lab.date | date: 'hh:mm aa'}}</td>
+    </tr>
+  </tbody>
+</table>

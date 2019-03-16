@@ -3,7 +3,7 @@
         <div>
             <header class="p-4">
                 <!-- <a href="#!" class="menu-toggle"><i class="fas fa-bars"></i></a> -->
-                <a routerLink="overview" class="spur-logo">
+                <a routerLink="" class="spur-logo">
                     <i class="fas fa-heartbeat text-danger"></i><span class="text-white">Strand</span></a>
             </header>
             <nav class="align-middle">
@@ -17,7 +17,7 @@
         </div>
     </mat-sidenav>
     <mat-sidenav-content>
-        <mat-toolbar class="container-fluid mb-3 mat-elevation-z6">
+        <mat-toolbar class="container-fluid mb-5 mat-elevation-z6">
             <button mat-button class="menu-toggle" (click)="sidenav.toggle()">
                 <i class="fas fa-bars"></i></button>
             <div class="tools">
@@ -34,8 +34,10 @@
                 </mat-menu>
             </div>
         </mat-toolbar>
-        <div class="container">
-            <router-outlet></router-outlet>
+        <div id="mini">
+            <mat-card class="mb-5">
+                <router-outlet></router-outlet>
+            </mat-card>
         </div>
     </mat-sidenav-content>
 </mat-sidenav-container>

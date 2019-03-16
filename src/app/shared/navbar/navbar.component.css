@@ -17,3 +17,7 @@ button {
 a:hover {
     text-decoration: none;
 }
+
+#mini {
+    padding: 0 15%;
+}
