@@ -24,7 +24,7 @@
           <td>{{lab.patientId}}</td>
           <td>{{lab.labType}}</td>
           <td>{{lab.labValue}}</td>
-          <td>{{lab.date}}</td>
+          <td>{{lab.date | date: 'dd/MM/yyyy'}}</td>
         </tr>
       </tbody>
     </table>
