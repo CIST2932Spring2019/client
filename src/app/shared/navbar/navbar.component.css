@@ -20,4 +20,32 @@ a:hover {
 
 #mini {
     padding: 0 15%;
+    margin-top: 112px;
+}
+
+#navHeader {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 4%;
+    left: 12.5%;
+}
+
+#navItems {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 30%;
+    left: 0%;
+}
+
+.tbar {
+    position: fixed;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+.absolute {
+    position: fixed;
+    right: 2%;
 }

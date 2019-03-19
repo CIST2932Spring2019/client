@@ -15,7 +15,6 @@
 <table *ngIf="isVisible" class="table table-hover">
   <thead>
     <tr>
-      <th class="mat-subheading-2">Patient Id</th>
       <th class="mat-subheading-2">Type</th>
       <th class="mat-subheading-2">Value</th>
       <th class="mat-subheading-2">Date</th>
@@ -23,7 +22,6 @@
   </thead>
   <tbody>
     <tr *ngFor="let lab of labs">
-      <td>{{lab.patientId}}</td>
       <td>{{lab.labType}}</td>
       <td>{{lab.labValue}}</td>
       <td>{{lab.date | date: 'MM/dd/yyyy'}}<br>{{lab.date | date: 'hh:mm aa'}}</td>
@@ -34,18 +32,20 @@
 <table *ngIf="!isVisible" class="table table-hover">
   <thead>
     <tr>
-      <th class="mat-subheading-2">Edit Button Success</th>
       <th class="mat-subheading-2">Type</th>
       <th class="mat-subheading-2">Value</th>
       <th class="mat-subheading-2">Date</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let lab of labs">
-      <td>{{lab.patientId}}</td>
+    <tr *ngFor="let lab of labs; let i = index">
       <td>{{lab.labType}}</td>
       <td>{{lab.labValue}}</td>
       <td>{{lab.date | date: 'MM/dd/yyyy'}}<br>{{lab.date | date: 'hh:mm aa'}}</td>
+      <td>
+        <button mat-raised-button color="warn" (click)="softDeleteLab(i)">
+          <i class="fas fa-times"></i><Label></Label></button></td>
     </tr>
   </tbody>
 </table>
