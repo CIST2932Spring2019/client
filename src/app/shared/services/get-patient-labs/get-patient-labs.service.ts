@@ -7,7 +7,7 @@ import { CurrentPatientService } from '../current-patient/current-patient.servic
 })
 export class GetPatientLabsService {
   currentPatient: any = this.currentPatientService.getCurrentPatient();
-  private url: string = 'http://localhost:44400/api/labscollection';
+  private url: string = 'https://labsapi.azurewebsites.net/api/labscollection';
 
   constructor(
     private http: Http,

@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class GetAllLabTypesService {
-  private url: string = 'http://localhost:44400/api/labstype';
+  private url: string = 'https://labsapi.azurewebsites.net/api/labstype';
 
   constructor(private http: Http) { }
 
